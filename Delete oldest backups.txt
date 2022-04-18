@@ -1,5 +1,6 @@
- #!/bin/bash
-
+#!/bin/bash
+# https://sysadmiando.blogspot.com/2022/04/script-delete-oldest-backups.html
+# By @jomarore
 # Created by Jose Rojas
 # Date 2022-04-18
 
