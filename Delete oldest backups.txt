@@ -1,6 +1,6 @@
  #!/bin/bash
 
-# Created by Jose Rojas // TRIGÉNIUS
+# Created by Jose Rojas
 # Date 2022-04-18
 
 # Path existing.
