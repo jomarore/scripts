@@ -1,5 +1,7 @@
 #!/bin/bash
+# https://github.com/jomarore/scripts/blob/main/Delete%20oldest%20backups.sh
 # https://sysadmiando.blogspot.com/2022/04/script-delete-oldest-backups.html
+# https://jomarore.blogspot.com/2022/04/script-delete-oldest-backups.html
 # By @jomarore
 # Created by Jose Rojas
 # Date 2022-04-18
