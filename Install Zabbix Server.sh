@@ -1,6 +1,6 @@
 INSTALL AND CONF. ZABBIX SERVER
 
-
+apt install apache2 php php-mysql php-mysqlnd php-ldap php-bcmath php-mbstring php-gd php-pdo php-xml libapache2-mod-php
 wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-1+ubuntu20.04_all.deb 
 dpkg -i zabbix-release_6.0-1+ubuntu20.04_all.deb 
 apt update 
