@@ -3,16 +3,14 @@ INSTALL AND CONF. ZABBIX SERVER
 # FOR UBUNTU
 dpkg-reconfigure tzdata
 dpkg-reconfigure locales
-apt install apache2 php php-mysql php-mysqlnd php-ldap php-bcmath php-mbstring php-gd php-pdo php-xml libapache2-mod-php
 wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-1+ubuntu20.04_all.deb 
 dpkg -i zabbix-release_6.0-1+ubuntu20.04_all.deb 
-apt update 
-apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent 
+apt update  
 apt -y install software-properties-common
 apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc' 
 add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.globo.tech/repo/10.5/ubuntu focal main'
 apt update
-apt install mariadb-server-10.5 mariadb-client-10.5 mariadb-common
+apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent mariadb-server-10.5 mariadb-client-10.5 mariadb-common apache2 php php-mysql php-mysqlnd php-ldap php-bcmath php-mbstring php-gd php-pdo php-xml libapache2-mod-php
 systemctl start mariadb
 vim /etc/mysql/mariadb.conf.d/50-server.cnf
 	...[mysqld]
@@ -55,14 +53,11 @@ reboot
 # FOR DEBIAN
 dpkg-reconfigure tzdata
 dpkg-reconfigure locales
-apt install apache2 php php-mysql php-mysqlnd php-ldap php-bcmath php-mbstring php-gd php-pdo php-xml libapache2-mod-php
 wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-1+debian11_all.deb
 apt install ./zabbix-release_6.0-1+debian11_all.deb
 apt update
-apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
-apt install mariadb-server-10.5 mariadb-client-10.5 mariadb-common
+apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent mariadb-server-10.5 mariadb-client-10.5 mariadb-common apache2 php php-mysql php-mysqlnd php-ldap php-bcmath php-mbstring php-gd php-pdo php-xml libapache2-mod-php
 systemctl start mariadb
-systemctl enable mariadb
 mysql_secure_installation 
 mysql -uroot -p
 	SELECT VERSION(); 
